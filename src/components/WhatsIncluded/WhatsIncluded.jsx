@@ -73,12 +73,7 @@ export default function WhatsIncluded() {
               <div key={item.id} className={styles.checklistRow}>
                 {/* Checkbox + Item Info */}
                 <div className={styles.itemInfo}>
-                  <input
-                    type="checkbox"
-                    checked={true}
-                    readOnly
-                    className={styles.checkbox}
-                  />
+                  <div className={styles.checkbox} />
                   <div className={styles.itemDetails}>
                     <span className={styles.itemName}>{item.name}</span>
                     <span className={styles.itemDesc}>{item.description}</span>

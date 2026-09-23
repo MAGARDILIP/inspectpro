@@ -14,7 +14,7 @@
 
 import { useState } from "react";
 import { footerLinks } from "@/data/content";
-import { FiCheckCircle, FiChevronDown } from "react-icons/fi";
+import { FiShield, FiChevronDown } from "react-icons/fi";
 import styles from "./Footer.module.css";
 
 export default function Footer() {
@@ -42,7 +42,7 @@ export default function Footer() {
           {/* Company Info */}
           <div className={styles.companyInfo}>
             <a href="/" className={styles.logo}>
-              <FiCheckCircle className={styles.logoIcon} />
+              <FiShield className={styles.logoIcon} />
               <span className={styles.logoText}>InspectPro</span>
             </a>
             <p className={styles.companyDescription}>
@@ -85,13 +85,6 @@ export default function Footer() {
           ))}
         </div>
 
-        {/* ----- Contact Info ----- */}
-        <div className={styles.contactSection}>
-          <p className={styles.contactTitle}>Contact</p>
-          <p className={styles.contactItem}>+000 549 6910</p>
-          <p className={styles.contactItem}>+000 508 0069</p>
-          <p className={styles.contactItem}>info@inspectpro.co</p>
-        </div>
 
         {/* ----- Bottom Bar ----- */}
         <div className={styles.bottomBar}>

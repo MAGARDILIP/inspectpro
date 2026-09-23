@@ -15,6 +15,11 @@
   --color-primary-dark: #0A5C5F;
   --color-primary-light: #E6F4F4;
 
+  /* Blue Accent (for CTA buttons, matching reference) */
+  --color-blue: #2563EB;
+  --color-blue-dark: #1D4ED8;
+  --color-blue-light: #DBEAFE;
+
   /* Dark Navy (Hero, CTA backgrounds) */
   --color-navy: #0F2B3C;
   --color-navy-light: #1A3F54;
@@ -97,18 +102,45 @@ a {
   white-space: nowrap;
 }
 
-/* Primary Button - Teal filled */
+/* Primary Button - Blue filled (matches reference design) */
 .btn-primary {
-  background-color: var(--color-primary);
+  background-color: var(--color-blue);
   color: white;
-  border-color: var(--color-primary);
+  border-color: var(--color-blue);
 }
 
 .btn-primary:hover {
-  background-color: var(--color-primary-dark);
-  border-color: var(--color-primary-dark);
+  background-color: var(--color-blue-dark);
+  border-color: var(--color-blue-dark);
   transform: translateY(-1px);
-  box-shadow: 0 4px 12px rgba(13, 115, 119, 0.3);
+  box-shadow: 0 4px 12px rgba(37, 99, 235, 0.3);
+}
+
+/* White Button - For dark backgrounds (CTA section) */
+.btn-white {
+  background-color: white;
+  color: var(--color-navy);
+  border-color: white;
+  font-weight: 700;
+}
+
+.btn-white:hover {
+  background-color: #F3F4F6;
+  border-color: #F3F4F6;
+  transform: translateY(-1px);
+}
+
+/* Text Link Button - underlined text style */
+.btn-text-link {
+  background: transparent;
+  color: white;
+  border-color: transparent;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+.btn-text-link:hover {
+  color: rgba(255, 255, 255, 0.8);
 }
 
 /* Secondary Button - White outline */

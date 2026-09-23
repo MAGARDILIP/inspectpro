@@ -17,10 +17,10 @@ export default function CTABanner() {
         <p className={styles.subtitle}>{ctaContent.description}</p>
 
         <div className={styles.buttons}>
-          <a href="#" className="btn btn-primary">
+          <a href="#" className="btn btn-white">
             {ctaContent.primaryCTA}
           </a>
-          <a href="#" className="btn btn-dark">
+          <a href="#" className="btn btn-text-link">
             {ctaContent.secondaryCTA}
           </a>
         </div>

@@ -60,8 +60,10 @@
 .checkbox {
   width: 18px;
   height: 18px;
-  accent-color: var(--color-primary);
-  cursor: pointer;
+  border: 2px solid #D1D5DB;
+  border-radius: 4px;
+  background: transparent;
+  flex-shrink: 0;
 }
 
 .itemDetails {

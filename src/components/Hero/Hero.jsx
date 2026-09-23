@@ -52,7 +52,7 @@ export default function Hero() {
   const completedCount = Object.values(statuses).filter(
     (s) => s !== null && s !== undefined
   ).length;
-  const totalCount = checklistItems.length;
+  const totalCount = 10; /* Total inspection items (including hidden ones) */
   const progressPercent = (completedCount / totalCount) * 100;
 
   return (
@@ -98,12 +98,7 @@ export default function Hero() {
                 <div key={item.id} className={styles.checklistRow}>
                   {/* Item checkbox and name */}
                   <div className={styles.itemInfo}>
-                    <input
-                      type="checkbox"
-                      checked={statuses[item.id] !== null}
-                      readOnly
-                      className={styles.checkbox}
-                    />
+                    <div className={styles.checkbox} />
                     <span className={styles.itemName}>{item.name}</span>
                   </div>
 

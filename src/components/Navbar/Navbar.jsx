@@ -14,7 +14,7 @@
 
 import { useState } from "react";
 import { navLinks } from "@/data/content";
-import { FiMenu, FiX, FiChevronDown, FiCheckCircle } from "react-icons/fi";
+import { FiMenu, FiX, FiChevronDown, FiShield } from "react-icons/fi";
 import styles from "./Navbar.module.css";
 
 export default function Navbar() {
@@ -31,7 +31,7 @@ export default function Navbar() {
       <div className={styles.container}>
         {/* ----- Logo ----- */}
         <a href="/" className={styles.logo}>
-          <FiCheckCircle className={styles.logoIcon} />
+          <FiShield className={styles.logoIcon} />
           <span className={styles.logoText}>InspectPro</span>
         </a>
 

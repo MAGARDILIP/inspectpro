@@ -13,8 +13,8 @@
  * 6. Benefits - Feature cards
  * 7. HowItWorks - 3-step process
  * 8. BuiltForTeams - Target audience cards
- * 9. CTABanner - Call to action
- * 10. FAQ - Frequently asked questions
+ * 9. FAQ - Frequently asked questions
+ * 10. CTABanner - Call to action
  * 11. Footer - Site footer
  */
 
@@ -42,8 +42,8 @@ export default function Home() {
         <Benefits />
         <HowItWorks />
         <BuiltForTeams />
-        <CTABanner />
         <FAQ />
+        <CTABanner />
       </main>
       <Footer />
     </>

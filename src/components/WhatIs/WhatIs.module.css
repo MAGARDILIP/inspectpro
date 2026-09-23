@@ -1,0 +1,92 @@
+/* ============================================
+   WhatIs Section Styles - InspectPro
+   ============================================
+   Two-column layout with text on left and
+   info callout box on right.
+   ============================================ */
+
+.whatIs {
+  padding: 5rem 0;
+  background-color: var(--color-bg-white);
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+  display: flex;
+  gap: 3rem;
+  align-items: flex-start;
+}
+
+/* ----- Left Column ----- */
+.textContent {
+  flex: 1;
+}
+
+.title {
+  font-size: 2rem;
+  font-weight: 800;
+  color: var(--color-text-primary);
+  margin-bottom: 1.25rem;
+  line-height: 1.2;
+}
+
+.paragraph {
+  font-size: 1rem;
+  line-height: 1.7;
+  color: var(--color-text-secondary);
+  margin-bottom: 1rem;
+}
+
+/* ----- Right Column: Callout Box ----- */
+.calloutWrapper {
+  flex: 1;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+}
+
+.callout {
+  display: flex;
+  gap: 0.75rem;
+  padding: 1.5rem;
+  background-color: var(--color-bg-light);
+  border-radius: 0.75rem;
+  border-left: 4px solid var(--color-info);
+  max-width: 400px;
+}
+
+.calloutIcon {
+  color: var(--color-info);
+  font-size: 1.25rem;
+  flex-shrink: 0;
+  margin-top: 0.15rem;
+}
+
+.calloutText {
+  font-size: 0.938rem;
+  line-height: 1.6;
+  color: var(--color-text-secondary);
+}
+
+.calloutText strong {
+  color: var(--color-text-primary);
+  font-weight: 600;
+}
+
+/* ===== RESPONSIVE: Mobile ===== */
+@media (max-width: 768px) {
+  .container {
+    flex-direction: column;
+    gap: 2rem;
+  }
+
+  .title {
+    font-size: 1.5rem;
+  }
+
+  .callout {
+    max-width: 100%;
+  }
+}

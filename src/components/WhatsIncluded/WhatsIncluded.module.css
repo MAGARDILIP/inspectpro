@@ -1,0 +1,217 @@
+/* ============================================
+   WhatsIncluded Section Styles - InspectPro
+   ============================================
+   Gray background section with two-column layout:
+   checklist table on left, notes panel on right.
+   ============================================ */
+
+.whatsIncluded {
+  padding: 5rem 0;
+  background-color: var(--color-bg-light);
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+}
+
+.sectionTitle {
+  font-size: 2rem;
+  font-weight: 800;
+  color: var(--color-text-primary);
+  text-align: center;
+  margin-bottom: 2.5rem;
+}
+
+.contentGrid {
+  display: flex;
+  gap: 2rem;
+  align-items: flex-start;
+}
+
+/* ===== LEFT: Checklist Panel ===== */
+.checklistPanel {
+  flex: 1.2;
+  background: white;
+  border-radius: 0.75rem;
+  padding: 1.5rem;
+  border: 1px solid var(--color-border);
+}
+
+.checklistRow {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.85rem 0;
+  border-bottom: 1px solid var(--color-border-light);
+}
+
+.checklistRow:last-child {
+  border-bottom: none;
+}
+
+.itemInfo {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.checkbox {
+  width: 18px;
+  height: 18px;
+  accent-color: var(--color-primary);
+  cursor: pointer;
+}
+
+.itemDetails {
+  display: flex;
+  flex-direction: column;
+}
+
+.itemName {
+  font-size: 0.938rem;
+  font-weight: 600;
+  color: var(--color-text-primary);
+}
+
+.itemDesc {
+  font-size: 0.8rem;
+  color: var(--color-text-light);
+  margin-top: 0.15rem;
+}
+
+/* ----- Status Buttons ----- */
+.statusButtons {
+  display: flex;
+  gap: 0.4rem;
+}
+
+.statusBtn {
+  display: flex;
+  align-items: center;
+  gap: 0.3rem;
+  padding: 0.35rem 0.65rem;
+  border-radius: 0.4rem;
+  border: 1px solid var(--color-border);
+  background: white;
+  cursor: pointer;
+  font-size: 0.75rem;
+  font-weight: 500;
+  color: var(--color-text-secondary);
+  transition: all 0.15s ease;
+}
+
+.statusBtn:hover {
+  border-color: var(--color-primary);
+}
+
+.passActive {
+  background-color: #DCFCE7;
+  border-color: var(--color-pass);
+  color: #166534;
+}
+
+.failActive {
+  background-color: #FEE2E2;
+  border-color: var(--color-fail);
+  color: #991B1B;
+}
+
+.naActive {
+  background-color: #F3F4F6;
+  border-color: var(--color-text-secondary);
+  color: var(--color-text-primary);
+}
+
+/* ===== RIGHT: Notes Panel ===== */
+.notesPanel {
+  flex: 0.8;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.noteGroup {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+}
+
+.noteLabel {
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: var(--color-text-primary);
+}
+
+.noteInput {
+  padding: 0.65rem 0.75rem;
+  border: 1px solid var(--color-border);
+  border-radius: 0.5rem;
+  font-size: 0.85rem;
+  color: var(--color-text-primary);
+  background: white;
+  outline: none;
+  transition: border-color 0.15s ease;
+}
+
+.noteInput::placeholder {
+  color: var(--color-text-light);
+}
+
+.noteInput:focus {
+  border-color: var(--color-primary);
+}
+
+/* Flagged Note (maintenance warning) */
+.flaggedNote {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.65rem 0.75rem;
+  background-color: #FEF3C7;
+  border: 1px solid #F59E0B;
+  border-radius: 0.5rem;
+  font-size: 0.85rem;
+  color: #92400E;
+  font-weight: 500;
+}
+
+.flagIcon {
+  color: #F59E0B;
+  font-size: 1rem;
+}
+
+.flagIconRight {
+  margin-left: auto;
+  color: #DC2626;
+  font-size: 1rem;
+}
+
+.noteOption {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.5rem 0;
+  font-size: 0.85rem;
+  color: #92400E;
+}
+
+/* ===== RESPONSIVE: Mobile ===== */
+@media (max-width: 768px) {
+  .sectionTitle {
+    font-size: 1.5rem;
+  }
+
+  .contentGrid {
+    flex-direction: column;
+  }
+
+  .statusButtons {
+    flex-wrap: wrap;
+  }
+
+  .statusBtn span {
+    display: none;
+  }
+}

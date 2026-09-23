@@ -1,0 +1,205 @@
+/* ============================================
+   Footer Styles - InspectPro
+   ============================================
+   Multi-column footer with logo, link groups,
+   contact info, and bottom copyright bar.
+   Mobile: accordion-style collapsible columns.
+   ============================================ */
+
+.footer {
+  background-color: var(--color-bg-light);
+  border-top: 1px solid var(--color-border);
+  padding: 3.5rem 0 0;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+}
+
+/* ----- Top Section: Logo + Columns ----- */
+.topSection {
+  display: flex;
+  gap: 3rem;
+  padding-bottom: 2rem;
+  border-bottom: 1px solid var(--color-border);
+}
+
+/* ----- Company Info (First Column) ----- */
+.companyInfo {
+  flex: 1.5;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-weight: 700;
+  font-size: 1.125rem;
+  color: var(--color-navy);
+  text-decoration: none;
+  margin-bottom: 0.75rem;
+}
+
+.logoIcon {
+  color: var(--color-primary);
+  font-size: 1.25rem;
+}
+
+.logoText {
+  font-weight: 800;
+}
+
+.companyDescription {
+  font-size: 0.85rem;
+  color: var(--color-text-secondary);
+  line-height: 1.6;
+  max-width: 260px;
+}
+
+/* ----- Link Columns ----- */
+.linkColumn {
+  flex: 1;
+}
+
+.columnTitle {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  background: none;
+  border: none;
+  font-size: 0.9rem;
+  font-weight: 700;
+  color: var(--color-text-primary);
+  margin-bottom: 1rem;
+  cursor: default;
+  padding: 0;
+}
+
+/* Hide chevron on desktop (only needed for mobile accordion) */
+.columnChevron {
+  display: none;
+  font-size: 1rem;
+  color: var(--color-text-secondary);
+  transition: transform 0.25s ease;
+}
+
+.chevronOpen {
+  transform: rotate(180deg);
+}
+
+.columnLinks {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+}
+
+.footerLink {
+  font-size: 0.85rem;
+  color: var(--color-text-secondary);
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.footerLink:hover {
+  color: var(--color-primary);
+}
+
+/* ----- Contact Section ----- */
+.contactSection {
+  padding: 1.5rem 0;
+  border-bottom: 1px solid var(--color-border);
+}
+
+.contactTitle {
+  font-size: 0.9rem;
+  font-weight: 700;
+  color: var(--color-text-primary);
+  margin-bottom: 0.5rem;
+}
+
+.contactItem {
+  font-size: 0.85rem;
+  color: var(--color-text-secondary);
+  margin-bottom: 0.25rem;
+}
+
+/* ----- Bottom Bar ----- */
+.bottomBar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1.25rem 0;
+}
+
+.bottomLinks {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.8rem;
+  color: var(--color-text-light);
+}
+
+.bottomLinks a {
+  color: var(--color-text-secondary);
+  text-decoration: none;
+}
+
+.bottomLinks a:hover {
+  color: var(--color-primary);
+}
+
+.copyright {
+  font-size: 0.8rem;
+  color: var(--color-text-light);
+}
+
+/* ===== RESPONSIVE: Mobile ===== */
+@media (max-width: 768px) {
+  .topSection {
+    flex-direction: column;
+    gap: 0;
+  }
+
+  .companyInfo {
+    margin-bottom: 1.5rem;
+  }
+
+  .companyDescription {
+    max-width: 100%;
+  }
+
+  /* Make column titles clickable on mobile */
+  .columnTitle {
+    cursor: pointer;
+    padding: 0.75rem 0;
+    margin-bottom: 0;
+    border-bottom: 1px solid var(--color-border-light);
+  }
+
+  /* Show chevron on mobile */
+  .columnChevron {
+    display: block;
+  }
+
+  /* Hide links by default on mobile (accordion) */
+  .columnLinks {
+    display: none;
+    padding: 0.5rem 0 1rem;
+  }
+
+  .columnLinksOpen {
+    display: flex;
+  }
+
+  .bottomBar {
+    flex-direction: column;
+    gap: 0.5rem;
+    text-align: center;
+  }
+}

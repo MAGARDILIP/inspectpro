@@ -1,0 +1,267 @@
+/* ============================================
+   Hero Section Styles - InspectPro
+   ============================================
+   Dark navy gradient background with two-column
+   layout: text content left, checklist card right.
+   Mobile: stacks vertically.
+   ============================================ */
+
+.hero {
+  background: linear-gradient(135deg, #0F2B3C 0%, #1A3F54 100%);
+  padding: 4rem 0;
+  min-height: 520px;
+  display: flex;
+  align-items: center;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+  display: flex;
+  align-items: center;
+  gap: 3rem;
+}
+
+/* ===== LEFT SIDE: Text Content ===== */
+.textContent {
+  flex: 1;
+  color: white;
+}
+
+.badge {
+  display: inline-block;
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.7);
+  margin-bottom: 1rem;
+}
+
+.title {
+  font-size: 2.75rem;
+  font-weight: 800;
+  line-height: 1.15;
+  margin-bottom: 1.25rem;
+  color: white;
+}
+
+.description {
+  font-size: 1.05rem;
+  line-height: 1.7;
+  color: rgba(255, 255, 255, 0.8);
+  margin-bottom: 2rem;
+  max-width: 480px;
+}
+
+.ctaButtons {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 1.25rem;
+  flex-wrap: wrap;
+}
+
+.helperText {
+  font-size: 0.85rem;
+  color: rgba(255, 255, 255, 0.5);
+}
+
+/* ===== RIGHT SIDE: Checklist Card ===== */
+.cardWrapper {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+}
+
+.checklistCard {
+  background: white;
+  border-radius: 1rem;
+  padding: 1.5rem;
+  width: 100%;
+  max-width: 420px;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+}
+
+.cardHeader {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-bottom: 1.25rem;
+  padding-bottom: 0.75rem;
+  border-bottom: 1px solid var(--color-border);
+}
+
+.cardHeaderIcon {
+  color: var(--color-primary);
+  font-size: 1.25rem;
+}
+
+.cardTitle {
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: var(--color-text-primary);
+}
+
+/* ----- Checklist Items ----- */
+.checklistItems {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.checklistRow {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.5rem 0;
+  border-bottom: 1px solid var(--color-border-light);
+}
+
+.itemInfo {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.checkbox {
+  width: 16px;
+  height: 16px;
+  accent-color: var(--color-primary);
+  cursor: pointer;
+}
+
+.itemName {
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: var(--color-text-primary);
+}
+
+/* ----- Status Toggle Buttons ----- */
+.statusButtons {
+  display: flex;
+  align-items: center;
+  gap: 0.35rem;
+}
+
+.statusBtn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 28px;
+  height: 28px;
+  border-radius: 6px;
+  border: 1px solid var(--color-border);
+  background: white;
+  cursor: pointer;
+  font-size: 0.7rem;
+  font-weight: 600;
+  color: var(--color-text-light);
+  transition: all 0.15s ease;
+}
+
+.statusBtn:hover {
+  border-color: var(--color-primary);
+}
+
+/* Active states for status buttons */
+.passActive {
+  background-color: var(--color-pass);
+  border-color: var(--color-pass);
+  color: white;
+}
+
+.failActive {
+  background-color: var(--color-warning);
+  border-color: var(--color-warning);
+  color: white;
+}
+
+.naBtn {
+  font-size: 0.65rem;
+}
+
+.naActive {
+  background-color: var(--color-text-secondary);
+  border-color: var(--color-text-secondary);
+  color: white;
+}
+
+.clipboardBtn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 28px;
+  height: 28px;
+  border: none;
+  background: transparent;
+  cursor: pointer;
+  color: var(--color-text-light);
+  transition: color 0.15s ease;
+}
+
+.clipboardBtn:hover {
+  color: var(--color-primary);
+}
+
+/* ----- Progress Bar ----- */
+.progressSection {
+  margin-top: 1.25rem;
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.progressBar {
+  flex: 1;
+  height: 8px;
+  background-color: var(--color-border-light);
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+.progressFill {
+  height: 100%;
+  background: linear-gradient(90deg, var(--color-primary), #10B981);
+  border-radius: 4px;
+  transition: width 0.4s ease;
+}
+
+.progressText {
+  font-size: 0.8rem;
+  font-weight: 500;
+  color: var(--color-text-secondary);
+  white-space: nowrap;
+}
+
+/* ===== RESPONSIVE: Mobile ===== */
+@media (max-width: 768px) {
+  .hero {
+    padding: 3rem 0;
+  }
+
+  .container {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .title {
+    font-size: 2rem;
+  }
+
+  .description {
+    max-width: 100%;
+  }
+
+  .ctaButtons {
+    justify-content: center;
+  }
+
+  .cardWrapper {
+    width: 100%;
+  }
+
+  .checklistCard {
+    max-width: 100%;
+  }
+}

@@ -1,26 +1,138 @@
+/* ============================================
+   InspectPro - Global Styles & Design System
+   ============================================
+   This file defines the brand colors, typography,
+   and base styles used throughout the application.
+   Tailwind CSS is imported for utility classes.
+   ============================================ */
+
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
-
+/* ----- Custom Theme Tokens for Tailwind ----- */
 @theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  /* Brand Colors */
+  --color-primary: #0D7377;
+  --color-primary-dark: #0A5C5F;
+  --color-primary-light: #E6F4F4;
+
+  /* Dark Navy (Hero, CTA backgrounds) */
+  --color-navy: #0F2B3C;
+  --color-navy-light: #1A3F54;
+
+  /* Text Colors */
+  --color-text-primary: #1A1A2E;
+  --color-text-secondary: #6B7280;
+  --color-text-light: #9CA3AF;
+
+  /* Background Colors */
+  --color-bg-light: #F8F9FA;
+  --color-bg-white: #FFFFFF;
+
+  /* Status Colors (for checklist) */
+  --color-pass: #10B981;
+  --color-fail: #EF4444;
+  --color-warning: #F59E0B;
+  --color-info: #3B82F6;
+
+  /* Border & Divider */
+  --color-border: #E5E7EB;
+  --color-border-light: #F3F4F6;
+
+  /* Font Family */
+  --font-sans: var(--font-inter);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+/* ----- Base Styles ----- */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-sans), Arial, Helvetica, sans-serif;
+  color: var(--color-text-primary);
+  background-color: var(--color-bg-white);
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* ----- Smooth Scrolling ----- */
+html {
+  scroll-behavior: smooth;
+}
+
+/* ----- Container Utility ----- */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+}
+
+/* ----- Section Spacing ----- */
+.section {
+  padding: 5rem 0;
+}
+
+/* ----- Link Resets ----- */
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+/* ----- Button Base Styles ----- */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  padding: 0.75rem 1.5rem;
+  border-radius: 0.5rem;
+  font-weight: 600;
+  font-size: 0.938rem;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  border: 2px solid transparent;
+  white-space: nowrap;
+}
+
+/* Primary Button - Teal filled */
+.btn-primary {
+  background-color: var(--color-primary);
+  color: white;
+  border-color: var(--color-primary);
+}
+
+.btn-primary:hover {
+  background-color: var(--color-primary-dark);
+  border-color: var(--color-primary-dark);
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(13, 115, 119, 0.3);
+}
+
+/* Secondary Button - White outline */
+.btn-secondary {
+  background-color: white;
+  color: var(--color-text-primary);
+  border-color: var(--color-border);
+}
+
+.btn-secondary:hover {
+  border-color: var(--color-primary);
+  color: var(--color-primary);
+  transform: translateY(-1px);
+}
+
+/* Dark Button - For dark backgrounds (white outline) */
+.btn-dark {
+  background-color: transparent;
+  color: white;
+  border-color: white;
+}
+
+.btn-dark:hover {
+  background-color: white;
+  color: var(--color-navy);
+  transform: translateY(-1px);
 }

@@ -1,0 +1,69 @@
+/* ============================================
+   TrustedBy Section Styles - InspectPro
+   ============================================
+   Light gray background strip with centered text
+   and partner logos in a horizontal row.
+   ============================================ */
+
+.trustedBy {
+  background-color: var(--color-bg-light);
+  padding: 2.5rem 0;
+  border-top: 1px solid var(--color-border);
+  border-bottom: 1px solid var(--color-border);
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+  text-align: center;
+}
+
+.title {
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: var(--color-text-secondary);
+  margin-bottom: 1.5rem;
+}
+
+.logoGrid {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 2.5rem;
+  flex-wrap: wrap;
+}
+
+.logoItem {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: var(--color-text-secondary);
+  opacity: 0.7;
+  transition: opacity 0.2s ease;
+}
+
+.logoItem:hover {
+  opacity: 1;
+}
+
+.logoIcon {
+  font-size: 1.25rem;
+}
+
+.logoText {
+  font-size: 0.875rem;
+  font-weight: 700;
+  white-space: nowrap;
+}
+
+/* ===== RESPONSIVE: Mobile ===== */
+@media (max-width: 768px) {
+  .logoGrid {
+    gap: 1.5rem;
+  }
+
+  .logoText {
+    font-size: 0.75rem;
+  }
+}

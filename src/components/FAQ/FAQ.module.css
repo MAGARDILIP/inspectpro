@@ -1,0 +1,89 @@
+/* ============================================
+   FAQ Section Styles - InspectPro
+   ============================================
+   Accordion-style FAQ with animated chevron.
+   Clean bordered items with smooth expand/collapse.
+   ============================================ */
+
+.faq {
+  padding: 5rem 0;
+  background-color: var(--color-bg-white);
+}
+
+.container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+}
+
+.title {
+  font-size: 2rem;
+  font-weight: 800;
+  color: var(--color-text-primary);
+  margin-bottom: 2rem;
+}
+
+/* ----- Accordion List ----- */
+.accordionList {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+
+.accordionItem {
+  border-bottom: 1px solid var(--color-border);
+}
+
+/* ----- Accordion Header (Question) ----- */
+.accordionHeader {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  padding: 1.15rem 0;
+  background: none;
+  border: none;
+  cursor: pointer;
+  text-align: left;
+}
+
+.question {
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--color-text-primary);
+  padding-right: 1rem;
+}
+
+/* ----- Chevron Icon (rotates when open) ----- */
+.chevron {
+  font-size: 1.25rem;
+  color: var(--color-text-secondary);
+  transition: transform 0.25s ease;
+  flex-shrink: 0;
+}
+
+.chevronOpen {
+  transform: rotate(180deg);
+}
+
+/* ----- Accordion Body (Answer) ----- */
+.accordionBody {
+  padding: 0 0 1.25rem 0;
+}
+
+.answer {
+  font-size: 0.925rem;
+  color: var(--color-text-secondary);
+  line-height: 1.7;
+}
+
+/* ===== RESPONSIVE: Mobile ===== */
+@media (max-width: 768px) {
+  .title {
+    font-size: 1.5rem;
+  }
+
+  .question {
+    font-size: 0.938rem;
+  }
+}
